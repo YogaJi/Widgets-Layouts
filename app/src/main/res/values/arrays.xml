@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="games">
+        <item>American Football</item>
+        <item>Basketball</item>
+        <item>Freestyle Wrestling</item>
+        <item>Cricket</item>
+    </string-array>
+</resources>

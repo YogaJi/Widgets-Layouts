@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--score layout -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/scoreA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/scoreA"
+            android:textSize="76sp" />
+
+        <TextView
+            android:id="@+id/scoreB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/scoreB"
+            android:textSize="76sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginTop="170dp"
+        android:paddingHorizontal="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <!--Team name1 -->
+        <TextView
+            android:id="@+id/nameA"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/teamA"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/vs"
+            android:textSize="16sp" />
+
+        <!--Team name2 -->
+        <TextView
+            android:id="@+id/nameB"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/teamB"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!--Team button Layout -->
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_marginTop="78dp"
+        android:paddingHorizontal="30dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <!--Team1 button -->
+        <Button
+            android:id="@+id/teamAbut"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="20dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="#7B7B7B"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/team_a" />
+
+        <!--Team2 button -->
+        <Button
+            android:id="@+id/teamBbut"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1"
+            android:background="#7B7B7B"
+            android:text="@string/team_b"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--add score Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="383dp"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+        <!--game spinner -->
+        <Spinner
+            android:id="@+id/gamespin"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:overlapAnchor="false"
+            android:layout_height="65dp"
+            android:entries="@array/games"
+            android:spinnerMode="dropdown" />
+
+        <!--score radio -->
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="20dp">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/score_1" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/score_2" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/score_3" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/score_4" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
